@@ -1,8 +1,9 @@
 from Node import Node
 
+"""
+LINKED LIST WITHOUT TAIL POINTER
+"""
 
-# http://www.geeksforgeeks.org/write-a-function-to-get-nth-node-in-a-linked-list/
-# http://www.geeksforgeeks.org/given-only-a-pointer-to-a-node-to-be-deleted-in-a-singly-linked-list-how-do-you-delete-it/
 
 class LinkedListWithoutTailPointer(object):
     def __init__(self):
@@ -21,6 +22,7 @@ class LinkedListWithoutTailPointer(object):
         return self.head, "Emptied List"
 
     def value_at(self, index, zero_based_index=False):
+        # http://www.geeksforgeeks.org/write-a-function-to-get-nth-node-in-a-linked-list/
         if index == 0:
             return "Index Starts from 1"
         else:
@@ -147,31 +149,31 @@ class LinkedListWithoutTailPointer(object):
         while current is not None:
             print current.data, " Element", current.next, " Next"
             current = current.next
-    #http://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/
-    def print_middle(self):
-        ##1st Method
 
-        fast_ptr =self.head
+    def print_middle(self):
+        # http://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/
+        # 1st Method
+
+        fast_ptr = self.head
         slow_ptr = self.head
         while fast_ptr is not None and fast_ptr.next is not None:
             fast_ptr = fast_ptr.next.next
-            slow_ptr=slow_ptr.next
+            slow_ptr = slow_ptr.next
 
         print slow_ptr.data
 
-        ##Second Method
-        count =0
+        # Second Method
+        count = 0
         mid = self.head
         current = self.head
 
         while current is not None:
-            if count & 1==1:
+            if count & 1 == 1:
                 mid = mid.next
 
             current = current.next
-            count+=1
+            count += 1
         print mid.data
-
 
 
 p = LinkedListWithoutTailPointer()
@@ -184,34 +186,34 @@ p.push_front(60)
 p.push_front(70)
 p.push_front(80)
 
-# p.print_list()
-# print p.size()
-# print p.pop_front()
-# print p.size()
-# p.print_list()
-# print p.front()
-# print p.back()
-# # # print p.empty()
-# print p.value_at(1)
-# print p.value_at(1, zero_based_index=True)
-# p.push_back(1000)
-# p.push_back(1200)
-# p.print_list()
-# p.pop_back()
-# p.print_list()
-# p.insert(2, 999)
-# p.print_list()
-# p.insert(1, 998)
-# print "Printing list"
-# p.print_list()
-# p.erase(2)
-# p.print_list()
-# p.erase(4)
-# p.print_list()
-# print p.size()
-# p.erase(3)
-# p.print_list()
-# print p.size()
-# p.reverse()
-# p.print_list()
+p.print_list()
+print p.size()
+print p.pop_front()
+print p.size()
+p.print_list()
+print p.front()
+print p.back()
+# # print p.empty()
+print p.value_at(1)
+print p.value_at(1, zero_based_index=True)
+p.push_back(1000)
+p.push_back(1200)
+p.print_list()
+p.pop_back()
+p.print_list()
+p.insert(2, 999)
+p.print_list()
+p.insert(1, 998)
+print "Printing list"
+p.print_list()
+p.erase(2)
+p.print_list()
+p.erase(4)
+p.print_list()
+print p.size()
+p.erase(3)
+p.print_list()
+print p.size()
+p.reverse()
+p.print_list()
 p.print_middle()
