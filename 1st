@@ -1,0 +1,10 @@
+import sys
+def adder(a,b):
+    if a==0 or a>9 or b==0 or b>9:
+        print "Cant exceed"
+        sys.exit(0)
+    return a+b
+
+
+print adder(1,2)
+print adder(7,9)
