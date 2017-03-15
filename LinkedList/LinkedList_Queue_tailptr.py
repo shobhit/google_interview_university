@@ -1,6 +1,6 @@
 from Node import Node
 
-
+#Implement Queue using linked-list, with tail pointer:
 class LinkedList(object):
     def __init__(self):
         self.head = None
@@ -12,7 +12,7 @@ class LinkedList(object):
     def print_tail(self):
         print "Tail is =>", self.tail.data
 
-    def add_node(self, data):
+    def enqueue(self, data):
         node = Node(data)
         if self.head is None:
             self.head = node
@@ -23,7 +23,7 @@ class LinkedList(object):
             node.next = None
             self.tail = node
 
-    def remove_element(self):
+    def dequeue(self):
         if self.head is not None:
             node = self.head
             if self.head.next is None:
@@ -50,18 +50,18 @@ class LinkedList(object):
 
 
 linked_list = LinkedList()
-linked_list.add_node(10)
-linked_list.add_node(20)
-linked_list.add_node(30)
-linked_list.add_node(40)
+linked_list.enqueue(10)
+linked_list.enqueue(20)
+linked_list.enqueue(30)
+linked_list.enqueue(40)
 linked_list.print_list()
 linked_list.print_head()
 linked_list.print_tail()
-linked_list.remove_element()
+linked_list.dequeue()
 linked_list.print_list()
-linked_list.remove_element()
+linked_list.dequeue()
 linked_list.print_list()
-linked_list.remove_element()
+linked_list.dequeue()
 linked_list.print_list()
-linked_list.remove_element()
+linked_list.dequeue()
 linked_list.print_list()
