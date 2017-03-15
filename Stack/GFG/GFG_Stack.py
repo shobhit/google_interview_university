@@ -29,5 +29,7 @@ gfg.add_to_queue(10)
 gfg.add_to_queue(20)
 gfg.add_to_queue(30)
 gfg.add_to_queue(40)
+gfg.add_to_queue(50)
 gfg.remove_from_queue()
 gfg.print_queue()
+

@@ -20,7 +20,6 @@ class Stack(object):
         self.head=value
 
     def peek(self):
-        print "Top is=>",self.head
         return self.head
 
     def size(self):
@@ -61,5 +60,5 @@ class Stack(object):
 # stack.size()
 # print stack.to_array()
 # stack.clear()
-# stack.size()
+# print "Size is=>",stack.size()
 # stack.peek()
