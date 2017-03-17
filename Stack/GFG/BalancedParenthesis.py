@@ -2,7 +2,7 @@ from algorithmic_toolb.Stack.Stack import Stack
 
 
 # http://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/
-# http://www.geeksforgeeks.org/length-of-the-longest-valid-substring/
+# http://www.geeksforgeeks.org/length-of-the-longest-valid-substring/e
 
 class BalancedParenthesis:
     def __init__(self):
